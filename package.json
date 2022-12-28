@@ -2,6 +2,14 @@
   "name": "dashboard-syncfusion",
   "version": "0.1.0",
   "private": true,
+  "author": "Wac Ferreira",
+  "description": "Dashboard and apps with syncfusion component lib",
+  "homepage": "YOUR_GIT_REPO_URL",
+  "engines": {
+    "node": ">=16.15.1",
+    "yarn": ">=1.22.5",
+    "npm": "please use yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
