@@ -19,7 +19,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@next/font": "13.1.1",
+    "@next/font": "^13.1.1",
     "@syncfusion/ej2": "^20.4.40",
     "@syncfusion/ej2-react-calendars": "^20.4.40",
     "@syncfusion/ej2-react-charts": "^20.4.40",
