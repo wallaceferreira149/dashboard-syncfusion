@@ -3,7 +3,7 @@ import { Cart, ICart } from './Cart';
 import { mockCartProps } from './Cart.mocks';
 
 export default {
-  title: 'Cart/Cart',
+  title: 'main/Cart',
   component: Cart,
   args: {},
 } as ComponentMeta<typeof Cart>;
