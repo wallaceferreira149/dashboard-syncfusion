@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "@radix-ui/react-tooltip": "^1.0.2",
     "@syncfusion/ej2": "^20.4.40",
     "@syncfusion/ej2-react-calendars": "^20.4.40",
     "@syncfusion/ej2-react-charts": "^20.4.40",
@@ -36,6 +37,7 @@
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
+    "npm": "^9.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
