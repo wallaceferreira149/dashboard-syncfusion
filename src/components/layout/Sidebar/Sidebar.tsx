@@ -1,35 +1,41 @@
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+'use client';
 import Link from 'next/link';
 import { MdOutlineCancel } from 'react-icons/md';
 import { SiShopware } from 'react-icons/si';
+import { useStateContext } from '../../../context/GlobalContext';
 
 import { links } from '../../../data/dummy';
+import { Notification } from '../../common/Notification/Notification';
 
 export interface ISidebar {}
 
 export const Sidebar: React.FC<ISidebar> = ({}) => {
-  const isMenuActive = true;
-  const isLinkActive = true;
+  const { setActiveMenu, activeMenu } = useStateContext();
+  const isLinkActive = false;
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
-      {isMenuActive && (
+      {activeMenu && (
         <>
           <header className="flex justify-between items-center">
             <Link
               href="/"
+              onClick={() => setActiveMenu(false)}
               className="flex items-center gap-3 ml-3 mt-4 text-xl font-bold tracking-tight dark:text-white text-slate-900"
             >
-              <SiShopware /> <span>Shoppy</span>
+              <SiShopware />
+              <span>Shoppy</span>
             </Link>
-            <TooltipComponent content="close" position="BottomCenter">
+            <Notification content="close">
               <button
                 type="button"
-                onClick={() => {}}
+                onClick={() =>
+                  setActiveMenu((prevActiveMenu: boolean) => !prevActiveMenu)
+                }
                 className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden duration-300"
               >
                 <MdOutlineCancel />
               </button>
-            </TooltipComponent>
+            </Notification>
           </header>
           <menu className="mt-10">
             {links?.map((item) => (
