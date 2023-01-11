@@ -1,6 +1,6 @@
 import * as Tooltip from '@radix-ui/react-tooltip';
 
-export type NotificationProps = {
+export type ToolTipProps = {
   content: string | JSX.Element;
   showArrow?: boolean;
   delay?: number;
@@ -9,7 +9,7 @@ export type NotificationProps = {
   children: React.ReactNode;
 };
 
-export const Notification: React.FC<NotificationProps> = ({
+export const ToolTip: React.FC<ToolTipProps> = ({
   content,
   showArrow = true,
   delay = 0,
