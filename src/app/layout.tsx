@@ -1,12 +1,10 @@
 'use client';
 import { Open_Sans } from '@next/font/google';
 import { FiSettings } from 'react-icons/fi';
-import { Notification } from '../components/common/Notification/Notification';
+import { ToolTip } from '../components/common/ToolTip/ToolTip';
+import { Navbar } from '../components/layout/Navbar/Navbar';
 import { Sidebar } from '../components/layout/Sidebar/Sidebar';
-import {
-  GlobalContextProvider,
-  useStateContext,
-} from '../context/GlobalContext';
+import { GlobalContextProvider } from '../context/GlobalContext';
 import './globals.css';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
@@ -16,7 +14,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { activeMenu } = useStateContext();
+  // const { activeMenu } = useStateContext();
   const isMenuActive = true;
   return (
     <html lang="pt-br" className={openSans.className}>
@@ -30,14 +28,14 @@ export default function RootLayout({
           <div className="flex relative dark:bg-main-dark-bg">
             {/* Settings icon*/}
             <div className="fixed right-4 bottom-4 z-50">
-              <Notification content="settings">
+              <ToolTip content="settings">
                 <button
                   className={`text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray rounded-full bg-blue-400 duration-300 text-white`}
                   type="button"
                 >
                   <FiSettings />
                 </button>
-              </Notification>
+              </ToolTip>
             </div>
 
             {/* Sidebar colapse*/}
@@ -55,7 +53,7 @@ export default function RootLayout({
               }`}
             >
               <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-                Navbar
+                <Navbar />
               </div>
             </div>
           </div>
