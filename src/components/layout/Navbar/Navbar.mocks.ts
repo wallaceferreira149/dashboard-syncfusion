@@ -1,8 +1,6 @@
 import { INavbar } from './Navbar';
 
-const base: INavbar = {
-  sampleProps: 'Ola Mundo',
-};
+const base: INavbar = {};
 
 export const mockNavbarProps = {
   base,
