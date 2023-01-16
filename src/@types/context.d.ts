@@ -16,5 +16,5 @@ export type GlobalContextType = {
   setActiveMenu: Dispatch<SetStateAction<boolean>>;
   handleClick: (clicked: string) => void;
   screenSize: number | undefined;
-  setScreenSize:
+  setScreenSize: Dispatch<SetStateAction<number | undefined>>;
 };
